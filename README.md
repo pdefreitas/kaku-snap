@@ -1,7 +1,6 @@
 # Kaku
 
-<img src="
-https://github.com/pdefreitas/kaku-snap/blob/master/logo.png?raw=true" alt="Kaku logo">
+![Kaku Icon](http://i.imgur.com/c3KKQ9t.png)
 
 Kaku is a highly integrated music player that supports different online platforms like YouTube, SoundCloud, Vimeo and more. 
 
