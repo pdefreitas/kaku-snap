@@ -13,8 +13,8 @@ confinement: classic
 parts:
   kaku:
     plugin: dump
-    source: https://github.com/EragonJ/Kaku/releases/download/$SNAPCRAFT_PROJECT_VERSION/Kaku-$SNAPCRAFT_PROJECT_VERSION-amd64.deb
-    source-type: deb
+    source: https://github.com/pdefreitas/Kaku.git
+    source-type: git
     # Correct path to icon.
     prepare: |
       sed -i 's|Icon=kaku|Icon=/usr/share/kaku/logo\.png|g' usr/share/applications/kaku.desktop
@@ -34,8 +34,7 @@ parts:
 
 apps:
   kaku:
-    command: ${SNAP}/usr/share/kaku/kaku
-    desktop: usr/share/applications/kaku.desktop
+    command: kaku
     plugs:
       - browser-support
       - gsettings
@@ -45,3 +44,8 @@ apps:
       - pulseaudio
       - unity7
       - x11
+
+parts:
+  kaku:
+    plugin: nodejs
+    source: .
