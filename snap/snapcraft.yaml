@@ -1,0 +1,41 @@
+name: kaku
+version: 1.9.0
+summary: Kaku is a highly integrated music player supports different online platforms. 
+
+description: |
+  Kaku is a highly integrated music player supports
+  different online platform like YouTube, SoundCloud,
+  Vimeo and more.
+
+grade: stable
+confinement: classic
+
+parts:
+  kaku:
+    plugin: dump
+    source: https://github.com/EragonJ/Kaku/releases/download/$SNAPCRAFT_PROJECT_VERSION/Kaku-$SNAPCRAFT_PROJECT_VERSION-amd64.deb
+    source-type: deb
+    # Correct path to icon.
+    prepare: |
+      sed -i 's|Icon=kaku|Icon=/usr/share/kaku/logo\.png|g' usr/share/applications/kaku.desktop
+    after:
+      - desktop-gtk2
+    stage-packages:
+      - gvfs-bin
+      - libasound2
+      - libgconf-2-4
+      - libnotify4
+      - libnspr4
+      - libnss3
+      - libpcre3
+      - libpulse0
+      - libxss1
+      - libxtst6
+  electron-launch:
+    plugin: dump
+    source: files/
+
+apps:
+  kaku:
+    command: ${SNAP}/bin/desktop-launch ${SNAP}/usr/share/kaku/kaku
+    desktop: usr/share/applications/kaku.desktop
