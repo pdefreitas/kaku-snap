@@ -1,4 +1,6 @@
-# Kaku
+# Kaku 
+
+[![Snap Status](https://build.snapcraft.io/badge/pdefreitas/kaku-snap.svg)](https://build.snapcraft.io/user/pdefreitas/kaku-snap)
 
 ![Kaku Icon](http://i.imgur.com/c3KKQ9t.png)
 
