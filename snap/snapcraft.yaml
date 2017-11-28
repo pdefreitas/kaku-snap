@@ -36,3 +36,12 @@ apps:
   kaku:
     command: ${SNAP}/usr/share/kaku/kaku
     desktop: usr/share/applications/kaku.desktop
+    plugs:
+      - browser-support
+      - gsettings
+      - home
+      - mount-observe
+      - network
+      - pulseaudio
+      - unity7
+      - x11
