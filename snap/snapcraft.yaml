@@ -31,9 +31,6 @@ parts:
       - libpulse0
       - libxss1
       - libxtst6
-  electron-launch:
-    plugin: dump
-    source: files/
 
 apps:
   kaku:
