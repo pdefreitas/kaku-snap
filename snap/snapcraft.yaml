@@ -34,5 +34,5 @@ parts:
 
 apps:
   kaku:
-    command: ${SNAP}/bin/desktop-launch ${SNAP}/usr/share/kaku/kaku
+    command: ${SNAP}/usr/share/kaku/kaku
     desktop: usr/share/applications/kaku.desktop
